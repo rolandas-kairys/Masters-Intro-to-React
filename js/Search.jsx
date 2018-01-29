@@ -7,7 +7,9 @@ class Search extends Component {
   render() {
     return (
       <div className="search">
-        <pre><code>{JSON.stringify(preload, null, 4)}</code></pre>
+        {preload.shows.map(
+          (show) => <h3>{show.title}</h3>)
+        }
       </div>
     );
   }
