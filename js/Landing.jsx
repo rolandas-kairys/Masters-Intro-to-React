@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class Landing extends Component {
 
@@ -7,7 +8,7 @@ class Landing extends Component {
       <div className="landing">
         <h1>svideo</h1>
         <input type="text" placeholder="Search" />
-        <a>or Browse All on the list </a>
+        <Link to="search">or Browse All on the list </Link>
       </div>
     );
   }
