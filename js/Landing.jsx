@@ -7,7 +7,7 @@ class Landing extends Component {
       <div className="landing">
         <h1>svideo</h1>
         <input type="text" placeholder="Search" />
-        <a>or Browse All</a>
+        <a>or Browse All on the list </a>
       </div>
     );
   }
