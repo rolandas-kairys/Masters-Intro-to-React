@@ -1,5 +1,20 @@
 import React from 'react';
 import { shape, string } from 'prop-types';
+import styled from 'styled-components';
+
+
+
+const color = "#333";
+const Wrapper = styled.div`
+  width: 32%;
+  border: 2px solid ${color};
+  border-radius: 4px;
+  margin-bottom: 25px;
+  padding-right: 10px;
+  overflow: hidden;
+`;
+
+
 
 const ShowCard = ({ show }) => {
   return (
