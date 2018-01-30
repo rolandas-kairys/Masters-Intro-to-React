@@ -8,7 +8,7 @@ const color = "#333";
 const Wrapper = styled.div`
   width: 32%;
   border: 2px solid ${color};
-  border-radius: 4px;
+  border-radius: 25px;
   margin-bottom: 25px;
   padding-right: 10px;
   overflow: hidden;
@@ -18,7 +18,7 @@ const Wrapper = styled.div`
 
 const ShowCard = ({ show }) => {
   return (
-    <div className="show-card">
+    <Wrapper className="show-card">
       <img
         src={`/public/img/posters/${show.poster}`}
         alt={`${show.title} Show Poster`} />
@@ -27,7 +27,7 @@ const ShowCard = ({ show }) => {
         <h4> ({show.year} )</h4>
         <p> {show.description} </p>
       </div>
-    </div>
+    </Wrapper>
   );
 }
 
