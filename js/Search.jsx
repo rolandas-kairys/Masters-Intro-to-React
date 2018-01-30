@@ -13,13 +13,22 @@ class Search extends Component {
   }
 
 
+  handleSearchTermChange(event) {
+    this.setState({ searchTerm: event.target.value })
+  }
+
 
   render() {
     return (
       <div className="search">
         <header>
           <h1>svideo</h1>
-          <input value={this.state.searchTerm} type="text" placeholder="Search" />
+          <input
+            onChange={this.handleSearchTermChange}
+            value={this.state.searchTerm}
+            type="text"
+            placeholder="Search"
+          />
         </header>
         <div>
           {preload.shows.map(
