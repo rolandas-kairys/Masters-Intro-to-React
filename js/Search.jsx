@@ -10,6 +10,8 @@ class Search extends Component {
     this.state = {
       searchTerm: "This is debug statement"
     };
+
+    this.handleSearchTermChange = this.handleSearchTermChange.bind(this);
   }
 
 
