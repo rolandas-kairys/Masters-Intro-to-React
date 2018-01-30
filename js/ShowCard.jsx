@@ -14,12 +14,17 @@ const Wrapper = styled.div`
   overflow: hidden;
 `;
 
+const Image = styled.img`
+  width: 60%;
+  float: left;
+  margin-right: 10px;
+`;
 
 
 const ShowCard = ({ show }) => {
   return (
     <Wrapper className="show-card">
-      <img
+      <Image
         src={`/public/img/posters/${show.poster}`}
         alt={`${show.title} Show Poster`} />
       <div>
