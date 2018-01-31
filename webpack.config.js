@@ -12,7 +12,7 @@ module.exports = {
   devtool: 'cheap-eval-source-map',
   output: {
     path: path.join(__dirname, 'public'),
-    publicPath: "/public/",
+    publicPath: "/public/",                            // for HMR
     filename: 'bundle.js'
   },
   devServer: {
