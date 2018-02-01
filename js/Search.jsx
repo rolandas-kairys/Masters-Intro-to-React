@@ -12,7 +12,7 @@ class Search extends Component {
   };
 
 
-  handleSearchTermChange = (event) => {
+  handleSearchTermChange = (event: SyntheticKeyboardEvent<HTMLButtonElement> & { target: HTMLInputElement }) => {
     this.setState({ searchTerm: event.target.value })
   }
 
