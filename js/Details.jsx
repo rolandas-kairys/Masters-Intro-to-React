@@ -3,10 +3,11 @@
 
 import React from 'react';
 
-const Details = () => (
-  <div className="details" >
-    <h1>Details</h1>
-  </div>
-);
-
+const Details = (props) => {
+  return (
+    <div className="details" >
+      <pre><code>  {JSON.stringify(props, null, 4)}</code> </pre>
+    </div>
+  );
+}
 export default Details;

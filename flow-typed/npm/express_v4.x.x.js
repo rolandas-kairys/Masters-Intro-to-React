@@ -1,5 +1,5 @@
-// flow-typed signature: 69015a02b8b63360cdd041983ee6cbc5
-// flow-typed version: 9f7cf2ab0c/express_v4.x.x/flow_>=v0.32.x
+// flow-typed signature: 8cf0512334211b26b03bbfb64710e89e
+// flow-typed version: ed397013d1/express_v4.x.x/flow_>=v0.32.x
 
 import type { Server } from 'http';
 import type { Socket } from 'net';
@@ -21,7 +21,7 @@ declare type express$RequestParams = {
 
 declare class express$Request extends http$IncomingMessage mixins express$RequestResponseBase {
   baseUrl: string;
-  body: mixed;
+  body: any;
   cookies: {[cookie: string]: string};
   connection: Socket;
   fresh: boolean;
@@ -170,11 +170,11 @@ declare class express$Application extends express$Router mixins events$EventEmit
   constructor(): void;
   locals: {[name: string]: mixed};
   mountpath: string;
-  listen(port: number, hostname?: string, backlog?: number, callback?: (err?: ?Error) => mixed): ?Server;
-  listen(port: number, hostname?: string, callback?: (err?: ?Error) => mixed): ?Server;
-  listen(port: number, callback?: (err?: ?Error) => mixed): ?Server;
-  listen(path: string, callback?: (err?: ?Error) => mixed): ?Server;
-  listen(handle: Object, callback?: (err?: ?Error) => mixed): ?Server;
+  listen(port: number, hostname?: string, backlog?: number, callback?: (err?: ?Error) => mixed): Server;
+  listen(port: number, hostname?: string, callback?: (err?: ?Error) => mixed): Server;
+  listen(port: number, callback?: (err?: ?Error) => mixed): Server;
+  listen(path: string, callback?: (err?: ?Error) => mixed): Server;
+  listen(handle: Object, callback?: (err?: ?Error) => mixed): Server;
   disable(name: string): void;
   disabled(name: string): boolean;
   enable(name: string): express$Application;

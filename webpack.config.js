@@ -1,22 +1,22 @@
 const path = require('path');
-const webpack = require("webpack");                    // for HMR
+const webpack = require("webpack");
 
 module.exports = {
   context: __dirname,
   entry: [
-    "react-hot-loader/patch",                          // for HMR
-    "webpack-dev-server/client?http://localhost:8080", // for HMR
-    "webpack/hot/only-dev-server",                     // for HMR
+    "react-hot-loader/patch",
+    "webpack-dev-server/client?http://localhost:8080",
+    "webpack/hot/only-dev-server",
     './js/ClientApp.jsx'
   ],
   devtool: 'cheap-eval-source-map',
   output: {
     path: path.join(__dirname, 'public'),
-    publicPath: "/public/",                            // for HMR
+    publicPath: "/public/",
     filename: 'bundle.js'
   },
   devServer: {
-    hot: true,                                         // for HMR
+    hot: true,
     historyApiFallback: true,
     publicPath: '/public/'
   },
@@ -29,8 +29,8 @@ module.exports = {
     chunks: true
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),          // for HMR
-    new webpack.NamedModulesPlugin()                   // for HMR
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NamedModulesPlugin()
   ],
   module: {
     rules: [
