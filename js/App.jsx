@@ -19,9 +19,11 @@ const App = () => (
         <Route exact path="/" component={Landing} />
         <Route path="/search" component={Search} />
         <Route path="/details/:id" component={(props) =>
-          <Details
-            show={ preload.shows
-              .find( (show) => props.match.params.id === show.imdbID ) }/>    }/>
+            {
+              const selectedShow = preload.shows.find( (show) => props.match.params.id === show.imdbID );
+              return <Details show={   selectedShow  } />
+            }
+          } />
         <Route component={FourOhFour} />
       </Switch>
     </div>
