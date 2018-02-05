@@ -5,13 +5,15 @@ import React, { Component } from 'react';
 import ShowCard from './ShowCard';
 
 
+type Show = { title: string, year: string, description: string, poster: string, imdbID: string, trailer: string };
+
 class Search extends Component {
   state = {
     searchTerm: ""
   };
 
   props: {
-    shows: Array<{ title: string, year: string, description: string, poster: string, imdbID: string, trailer: string }>
+    shows: Array<Show>
   };
 
 
