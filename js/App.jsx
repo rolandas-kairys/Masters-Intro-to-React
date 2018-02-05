@@ -6,6 +6,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import Landing from './Landing';
 import Search from './Search';
 import Details from './Details';
+import preload from '../data.json';
 
 
 
