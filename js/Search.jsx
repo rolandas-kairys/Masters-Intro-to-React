@@ -11,7 +11,7 @@ class Search extends Component {
   };
 
   props: {
-    shows: Array<mixed>
+    shows: Array<{ title: string, year: string, description: string, poster: string, imdbID: string, trailer: string }>
   };
 
 
