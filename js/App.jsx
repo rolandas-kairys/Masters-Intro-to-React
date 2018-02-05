@@ -18,7 +18,7 @@ const App = () => (
     <div className="app">
       <Switch>
         <Route exact path="/" component={Landing} />
-        <Route path="/search" component={ () => <Search shows={preload.shows} />  }/>
+        <Route path="/search" component={ (props) => <Search shows={preload.shows} {...props} />  }/>
         <Route path="/details/:id" component={(props: { match: Match }) =>
             {
               const selectedShow = preload.shows.find( (show) => props.match.params.id === show.imdbID );
