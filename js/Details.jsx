@@ -3,7 +3,7 @@
 
 import React from 'react';
 
-const Details = (props) => {
+const Details = (props: { show: Show }) => {
   const { title, description, year, poster, trailer } = props.show;
   return (
     <div className="details" >
