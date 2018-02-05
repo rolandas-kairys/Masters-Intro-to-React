@@ -30,7 +30,7 @@ class Search extends Component {
           />
         </header>
         <div>
-          {preload.shows
+          {this.props.shows
             .filter(show =>
               `${show.title} ${show.description}`
                 .toUpperCase()
