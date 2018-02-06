@@ -17,9 +17,14 @@ const Header = (props: { showSearch?: boolean }) => {
       <h1>
         <Link to="/"> s-video </Link>
       </h1>
+      {utilSpace}
     </header>
   );
 };
 
+
+Header.defaultProps = {
+  showSearch: false
+};
 
 export default Header;
