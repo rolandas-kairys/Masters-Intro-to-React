@@ -5,7 +5,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-const Header = () => {
+const Header = (props: { showSearch?: boolean }) => {
+  let utilSpace;
+  if (props.showSearch) {
+    utilSpace = <h1>something-something</h1>
+  } else {
+    utilSpace = (<h2> <Link to="/search"> Back </Link> </h2>);
+  }
   return (
     <header>
       <h1>
