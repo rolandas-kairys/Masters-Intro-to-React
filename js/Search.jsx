@@ -24,7 +24,7 @@ class Search extends Component {
   render() {
     return (
       <div className="search">
-        <Header />
+        <Header showSearch handleSearchTermChange={this.handleSearchTermChange} />
         <div>
           {this.props.shows
             .filter(show =>
