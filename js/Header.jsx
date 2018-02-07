@@ -11,7 +11,7 @@ const Header = (props: { showSearch?: boolean }) => {
     utilSpace = (
       <input
         onChange={props.handleSearchTermChange}
-        // value={this.state.searchTerm}
+        value={props.searchTerm}
         type="text"
         placeholder="Search"
       />);
