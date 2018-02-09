@@ -2,11 +2,24 @@
 
 
 import React from 'react';
+import axios from 'axios';
 import Header from './Header';
+import Spinner from './Spinner';
 
 
 
 class Details extends React.Component {
+  state = {
+    apiData: { rating: "" }
+  };
+
+  componentDidMount() {
+    axios
+      .get(`http://localhost:3000/${this.props.show.imdbID}`)
+      .then((response: { data: { rating: string } }) => {
+        this.setState({ apiData: response.data });
+      });
+  }
 
   props: { show: Show };
 
