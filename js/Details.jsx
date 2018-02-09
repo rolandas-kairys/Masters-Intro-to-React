@@ -25,12 +25,23 @@ class Details extends React.Component {
 
   render() {
     const { title, description, year, poster, trailer } = this.props.show;
+
+    let ratingComponent;
+    if (this.state.apiData.rating) {
+      ratingComponent = <h3> {this.state.apiData.rating} </h3>
+    } else {
+      ratingComponent = <Spinner />
+    }
+
     return (
       <div className="details" >
         <Header />
         <section>
           <h1>{title}</h1>
           <h2>({year})</h2>
+
+          {ratingComponent}
+
           <img src={`/public/img/posters/${poster}`} alt={`Poster for ${title}`} />
           <p>{description}</p>
         </section>
