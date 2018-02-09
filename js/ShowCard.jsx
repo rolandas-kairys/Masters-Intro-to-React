@@ -3,6 +3,7 @@
 
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 
 
@@ -26,14 +27,16 @@ const Image = styled.img`
 const ShowCard = (props: { show: { poster: string, title: string, year: string, description: string, imdbID: string } }) => {
   return (
     <Wrapper className="show-card">
-      <Image
-        src={`/public/img/posters/${props.show.poster}`}
-        alt={`${props.show.title} Show Poster`} />
-      <div>
-        <h3>{props.show.title}</h3>
-        <h4> ({props.show.year} )</h4>
-        <p> {props.show.description} </p>
-      </div>
+      <Link to={`/details/${props.show.imdbID}`}>
+        <Image
+          src={`/public/img/posters/${props.show.poster}`}
+          alt={`${props.show.title} Show Poster`} />
+        <div>
+          <h3>{props.show.title}</h3>
+          <h4> ({props.show.year} )</h4>
+          <p> {props.show.description} </p>
+        </div>
+      </Link>
     </Wrapper>
   );
 }
